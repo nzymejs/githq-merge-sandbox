@@ -1,0 +1,8 @@
+name: optional
+on: [pull_request]
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sleep 10; test ! -f fail-optional
